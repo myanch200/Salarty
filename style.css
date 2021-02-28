@@ -1,0 +1,154 @@
+/* adding some initial properties to the body */
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+}
+
+a,
+a:visited,
+a:hover {
+    text-decoration: none;
+}
+
+header {
+    width: 100%;
+    height: 4rem;
+    background-color: white;
+    filter: drop-shadow(5px 5px 5px rgba(82, 81, 81, 0.575))
+}
+
+.navbar {
+    height: inherit;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 2rem;
+}
+
+.navbar li {
+    list-style: none;
+    padding-right: 1.5rem;
+}
+
+.navbar li a {
+    color: #3c3c3c;
+    transition: all 0.2s ease-in-out;
+}
+
+.navbar li a:hover {
+    color: #ff474e;
+    border-bottom: 1px solid #ff474e;
+}
+
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.hero-group {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    text-align: center;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+}
+
+.hero-information {
+    width: 20%;
+}
+
+.illustation {
+    width: 20%;
+    height: 20%
+}
+
+.hero-information h1 {
+    color: #ff474e;
+}
+
+.btn-cta {
+    padding: 1em;
+    background: #c42252;
+    background-image: linear-gradient(to right, #f33852, #c42252);
+    color: #f5f5f5;
+    font-weight: bold;
+}
+
+.services-section {
+    margin-top: 2rem;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.services-section>h2 {
+    padding: 1em;
+    color: #ff474e;
+    border-bottom: 2px solid #ff474e;
+    margin-bottom: 7rem;
+}
+
+.services {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.item {
+    width: 20%;
+    height: fit-content;
+    background-color: white;
+    filter: drop-shadow(5px 5px 5px rgba(82, 81, 81, 0.575));
+    padding: 2em;
+    transition: all 0.5s ease-in-out;
+}
+
+.item:hover {
+    transform: scale(1.10);
+}
+
+.item h2 {
+    color: #3ac072;
+}
+
+.servce-img {
+    width: 100px;
+    height: 100px;
+}
+
+footer {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 250px;
+    background-color: #c42252;
+    margin-top: 10rem;
+}
+
+footer h2 {
+    border-bottom: 2px solid white;
+    padding: 1.5rem;
+}
+
+footer li {
+    margin-top: 1em;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    text-decoration: underline;
+}
