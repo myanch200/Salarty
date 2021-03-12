@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <title>Salarty Pay Calculator</title>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./pay_calculator.html">Pay Calculator</a></li>
+            <li><a href="">Job Information</a></li>
+            <li class="green-text"><a href="">About us</a></li>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-group">
+                <div class="hero-information">
+                    <h1>Pay Calculator</h1>
+                    <p>For the moments you wonder how much you earn.
+                    </p>
+                </div>
+                <!-- The illustration is from undraw.co-->
+            </div>
+        </section>
+
+        <section class="calculator-section">
+
+            <div class="calculator-area">
+                <div class="result-section">
+                    <span>Yealy</span>
+                    <div id="yearly-box" class="result-box"></div>
+
+                    <span>Montly</span>
+                    <div id="monthly-box" class="result-box"></div>
+
+                    <span>Weekly</span>
+                    <div id="weekly-box" class="result-box"></div>
+                </div>
+                <div class="calculator">
+                    <h3>Amount in $ </h3>
+                    <form class="calculator-form">
+                        <input type="number" name="amount" id="amount" min="1">
+                        <div class="radio-wrapper">
+                            <div class="radio-item">
+                                <input type="radio" name="period" id="yearly" value="yealy">
+                                <label for="yearly">Yearly</label>
+
+                            </div>
+
+                            <div class="radio-item">
+
+
+                                <input type="radio" name="period" id="monthly" value="monthly">
+                                <label for="monthly">Monthly</label>
+
+                            </div>
+
+                            <div class="radio-item">
+
+                                <input type="radio" name="period" id="hourly" value="weekly">
+                                <label for="hourly">Weekly</label>
+
+                            </div>
+
+                        </div>
+                        <button id="calculate-btn" class="calculate-btn" type="submit">Calculate</button>
+                    </form>
+                </div>
+            </div>
+
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h2>Many thanks</h2>
+        <p>I just wanted to apprectiate the web resources if have used for this design
+
+        </p>
+        <ul>
+            <li>Icons: <a target="_blank" href="https://www.flaticon.com/">flaticon</a></li>
+            <li>Illustration: <a target="_blank" href="http://undraw.co/">Undraw</a></li>
+        </ul>
+
+    </footer>
+
+    <script src="calculator.js"></script>
+</body>
+
+</html>

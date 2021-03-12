@@ -29,6 +29,7 @@ header {
     justify-content: flex-end;
     align-items: center;
     margin-right: 2rem;
+    flex-wrap: wrap;
 }
 
 .navbar li {
@@ -148,11 +149,120 @@ footer h2 {
 }
 
 footer li {
-    margin-top: 1em;
+    margin-top: 0.7em;
 }
 
 footer a {
     text-decoration: none;
     color: white;
     text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+    }
+}
+
+
+/* 
+
+Pay calculator
+
+
+
+*/
+
+.calculator-section {
+    width: 90%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+}
+
+.calculator-area {
+    display: flex;
+    width: 80%;
+    height: 60vh;
+    background-color: #f5f5f5;
+    filter: drop-shadow(5px 5px 5px rgba(82, 81, 81, 0.575));
+}
+
+.result-section {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    width: 40%;
+    height: 100%;
+    filter: drop-shadow(2px 2px 2px rgba(82, 81, 81, 0.575));
+}
+
+.result-box {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    width: 40%;
+    height: 30px;
+    background: #c42252;
+    background-image: linear-gradient(to right, #f33852, #c42252);
+}
+
+.calculator {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    width: 60%;
+    height: 100%;
+    filter: drop-shadow(2px 2px 2px rgba(82, 81, 81, 0.575));
+}
+
+.radio-wrapper {
+    margin-top: 1.5rem;
+    display: flex;
+}
+
+.radio-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 1.5rem;
+    padding: 1em;
+    text-align: center;
+}
+
+.radio-item label {
+    margin-top: 0.5rem;
+}
+
+.calculator-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#amount {
+    padding: 0.6em;
+    border: 0.2px solid #3c3c3c;
+    outline: none;
+}
+
+.calculate-btn {
+    margin: 0 auto;
+    padding: 1em;
+    width: 150px;
+    justify-self: center;
+    margin-top: 2rem;
+    background-color: #f5f5f5;
+    border: 1px solid #f33852;
+    transition: all 0.2s ease-in-out;
+}
+
+.calculate-btn:hover {
+    color: white;
+    background-color: #f33852;
 }
