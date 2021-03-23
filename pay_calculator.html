@@ -46,14 +46,20 @@
 
                     <span>Weekly</span>
                     <div id="weekly-box" class="result-box"></div>
+                    <span>Hourly</span>
+                    <div id="hourly-box" class="result-box"></div>
                 </div>
                 <div class="calculator">
                     <h3>Amount in $ </h3>
                     <form class="calculator-form">
                         <input type="number" name="amount" id="amount" min="1">
+                        
+                        <label for="amountHours">Hours per week</label>
+                        <input type="number" name="amountHours" id="amountHours" min="1">
+
                         <div class="radio-wrapper">
                             <div class="radio-item">
-                                <input type="radio" name="period" id="yearly" value="yealy">
+                                <input type="radio" name="period" id="yearly" value="yearly">
                                 <label for="yearly">Yearly</label>
 
                             </div>
@@ -68,11 +74,17 @@
 
                             <div class="radio-item">
 
-                                <input type="radio" name="period" id="hourly" value="weekly">
+                                <input type="radio" name="period" id="weekly" value="weekly">
                                 <label for="hourly">Weekly</label>
 
                             </div>
 
+                               <div class="radio-item">
+
+                                <input type="radio" name="period" id="hourly" value="hourly">
+                                <label for="hourly">Hourly</label>
+
+                            </div>
                         </div>
                         <button id="calculate-btn" class="calculate-btn" type="submit">Calculate</button>
                     </form>
