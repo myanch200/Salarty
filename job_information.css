@@ -1,0 +1,32 @@
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.form-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 7rem;
+}
+.job-post-section{
+    min-height: 100vh;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+.job-box{
+        width: 400px;
+        height: 400px;
+        background-color:#eff7f6;
+        padding: 1rem;
+    }

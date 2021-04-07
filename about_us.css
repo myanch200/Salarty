@@ -1,0 +1,45 @@
+.first-impression{
+    width:100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap:20px;
+}
+.ab-text_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    flex-wrap: wrap;
+}
+.results{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.result-wrapper{
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+}
+.progress-ring__circle{
+    stroke-width: 0.68rem;
+    stroke-dasharray: 1000 ;
+    stroke-dashoffset: 900;
+    animation: dash 5s ;
+    
+}
+
+
+
+@keyframes dash {
+    to {
+       stroke-dashoffset: 0;
+        }
+      
+}
