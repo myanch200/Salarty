@@ -7,7 +7,7 @@ btnSubmit.addEventListener('click',listJobs);
 function listJobs(event){
     event.preventDefault();
     jobSection.innerHTML = '';
-    let baseUrl = 'http://api.lmiforall.org.uk/api/v1/soc/search?q=';
+    let baseUrl = 'https://api.lmiforall.org.uk/api/v1/soc/search?q=';
     let url = baseUrl +textField.value;
     console.log(url);
     fetch(url)
