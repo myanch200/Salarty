@@ -23,23 +23,26 @@
     flex-wrap: wrap;
     gap: 10px;
     margin: 20px 0px 20px 0px;
+    padding: 2rem;
+}
+.item-container{
+    padding: 1em;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+    flex-basis: 33%;
+    margin: 2rem;
+       
 }
 .job-box{
         display: flex;
         justify-content: center;
+        align-items: center;
         flex-direction: column;
-        width: 400px;
-        
-        height: fit-content;
-        background-color: white;
-        filter: drop-shadow(5px 5px 5px rgba(82, 81, 81, 0.575));
-        padding: 1rem;
-        color:black;
     }
 
     .job-box h2 {
         color: #ff474e;
-        align-self: flex-start;
+        
     }
     .item-detail-btn{
         height: 40px;
@@ -47,6 +50,7 @@
         background-color: white;
         outline: none;
         transition: all 0.3s ease-in-out;
+        width: 60%;
     }
 
     .item-detail-btn:hover{
@@ -54,4 +58,11 @@
         color: white;
         cursor: pointer;
 
+    }
+
+
+    @media (max-width: 768px){
+        .job-post-section{
+            flex-direction: column;
+        }
     }
