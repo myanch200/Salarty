@@ -59,7 +59,9 @@ function showModal(e){
 
 
 
-    } 
+    } else if(element.classList.contains('modal')){
+        modalSection.style.display = 'none';
+    }
 }
 
 
