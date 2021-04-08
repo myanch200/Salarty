@@ -5,13 +5,9 @@ const btnSubmit = document.getElementById('btnSubmit');
 const modalSection = document.querySelector('.modal');
 
 
-if()
+
 btnSubmit.addEventListener('click',listJobs);
-document.getElementsByClassName('item-detail-btn').forEach(item =>{
-    item.addEventListener('click',function(){
-        alert('lii');
-    })
-})
+
 
 function listJobs(event){
     event.preventDefault();
