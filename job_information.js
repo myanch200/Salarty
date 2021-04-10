@@ -15,57 +15,53 @@ btnSubmit.addEventListener('click',listJobs);
  * https://stackoverflow.com/questions/30601620/adding-an-event-listener-to-an-element-that-doesnt-exist-yet-in-vanilla-javascr
  * the answer is posted from Satpal
  */
-document.addEventListener('click',showModal);
 
-function showModal(e){
-    let element = e.target
-    if(element.tagName.toLowerCase() ==='button' && element.classList.contains('item-detail-btn')){
-            modalSection.style.display = 'block';
-           
-            
-            let socUrl ='http://api.lmiforall.org.uk/api/v1/ashe/estimatePay?soc='
-            let searchUrl =socUrl+element.getAttribute('data-soc');
+
+function hideAllDivItems(){
+    document.querySelectorAll('.job-box').forEach(div => {
+        div.style.display = 'none';
+    })
+    document.querySelectorAll('.salary-paragraph').forEach(paragraph => {
+        paragraph.innerText = '';
+    })
+
+}
+
+function setEstSalary(element, soc){
+    hideAllDivItems();
+    let weeklySalary = 0;
+    let yearly = 0;
+    let currentSerie = null;
+
+    let socUrl ='http://api.lmiforall.org.uk/api/v1/ashe/estimatePay?soc='
+            let searchUrl =socUrl+soc;
             fetch(searchUrl).
             then(response => response.json())
             .then(data => {
-                console.log(data);
+                
                 let series =  data.series;
                 let mostRecent = 1800;
-                let currentSerie = null;
                 series.forEach((serie)=>{
                    if(serie.year >= mostRecent){
                        mostRecent = serie.year
                        currentSerie = serie;
                    }
-                })
+                });
+                weeklySalary = currentSerie.estpay;
+                yearly = weeklySalary*52;
+                let pSalary = document.createElement('p');
+                pSalary.innerText = `Weekly: £${weeklySalary} - Yearly: ${yearly}`;
+                pSalary.className = 'salary-paragraph';
+               let divItem = element.previousElementSibling;
+               divItem.appendChild(pSalary);
+               divItem.style.display = 'block';
                
-                let weeklySalary = currentSerie.estpay;
-                let yearly = weeklySalary*52;
-                let infoP = document.createElement('p');
-                infoP.innerText = `Weekly: ${weeklySalary} - Yearly: ${yearly}`;
-                let closeBtn = document.createElement('span');
-                closeBtn.innerHTML ='&times;';
-                closeBtn.className ='close';
-                closeBtn.addEventListener("click",function(){
-                    modalSection.style.display = 'none';
-        
-                    });
-                modalContent.innerHTML = '';
-                modalContent.appendChild(closeBtn);
-                modalContent.appendChild(infoP);
+           
                 
-            })
-
-
-
-
-    } else if(element.classList.contains('modal')){
-        modalSection.style.display = 'none';
-    }
+                
+            });
+         
 }
-
-
-///
 
 function listJobs(event){
     event.preventDefault();
@@ -105,21 +101,34 @@ function listJobs(event){
                 itemDetail.setAttribute('data-toggle','modal');
                 itemDetail.id
                 
-                divItem.appendChild(itemTitle);
+                itemContainer.appendChild(itemTitle);
                 divItem.appendChild(itemDescirption);
                 divItem.appendChild(itemSoc);
 
                 divItem.appendChild(qualifications)
+           
 
-                divItem.appendChild(itemDetail);
+                
                 itemContainer.appendChild(divItem);
-
+                divItem.style.display = 'none';
+                itemContainer.appendChild(itemDetail)
                 jobSection.appendChild(itemContainer);
+              
                 
             })
 
     })
     .catch(error => console.error(error));
+
+    document.addEventListener('click', function(e){
+        if(e.target.tagName.toLowerCase() ==='button' && e.target.classList.contains('item-detail-btn')){
+            let element = e.target;
+            let divItem = element.previousElementSibling;
+            setEstSalary(element, element.getAttribute('data-soc'));
+            
+           
+        }
+    })
     
 
 }
