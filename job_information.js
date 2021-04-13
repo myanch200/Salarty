@@ -39,7 +39,7 @@ function setEstSalary(element, soc){
     let yearly = 0;
     let currentSerie = null;
 
-    let socUrl ='http://api.lmiforall.org.uk/api/v1/ashe/estimatePay?soc='
+    let socUrl ='https://api.lmiforall.org.uk/api/v1/ashe/estimatePay?soc='
             let searchUrl =socUrl+soc;
             fetch(searchUrl).
             then(response => response.json())
