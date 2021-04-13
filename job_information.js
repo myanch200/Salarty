@@ -21,12 +21,18 @@ function hideAllDivItems(){
     document.querySelectorAll('.job-box').forEach(div => {
         div.style.display = 'none';
     })
-    document.querySelectorAll('.salary-paragraph').forEach(paragraph => {
-        paragraph.innerText = '';
-    })
+  
+  
 
 }
+/* 
+    function that receives the element 
+    and the soc number that will help with 
+    the fetch
+    It will then change the div display toand add the 
+    salary infromation
 
+*/
 function setEstSalary(element, soc){
     hideAllDivItems();
     let weeklySalary = 0;
@@ -50,9 +56,16 @@ function setEstSalary(element, soc){
                 weeklySalary = currentSerie.estpay;
                 yearly = weeklySalary*52;
                 let pSalary = document.createElement('p');
-                pSalary.innerText = `Weekly: £${weeklySalary} - Yearly: ${yearly}`;
+                pSalary.innerText = `Weekly: £${weeklySalary} - Yearly: £${yearly}`;
                 pSalary.className = 'salary-paragraph';
                let divItem = element.previousElementSibling;
+
+               // Removing old paraph with salary (if any)
+               document.querySelectorAll('.salary-paragraph').forEach(paragraph =>{
+                   if(divItem.contains(paragraph)){
+                       divItem.removeChild(paragraph);
+                   }
+               })
                divItem.appendChild(pSalary);
                divItem.style.display = 'block';
                
@@ -60,11 +73,14 @@ function setEstSalary(element, soc){
                 
                 
             });
+           
          
 }
 
 function listJobs(event){
     event.preventDefault();
+    
+
     jobSection.innerHTML = '';
     let baseUrl = 'https://api.lmiforall.org.uk/api/v1/soc/search?q=';
     let url = baseUrl +textField.value;
@@ -72,7 +88,6 @@ function listJobs(event){
     fetch(url)
     .then(response => response.json())
     .then((data) => {
-
             console.log(data);
             data.forEach((item) =>{
                 let itemContainer = document.createElement('div');
@@ -123,7 +138,6 @@ function listJobs(event){
     document.addEventListener('click', function(e){
         if(e.target.tagName.toLowerCase() ==='button' && e.target.classList.contains('item-detail-btn')){
             let element = e.target;
-            let divItem = element.previousElementSibling;
             setEstSalary(element, element.getAttribute('data-soc'));
             
            
