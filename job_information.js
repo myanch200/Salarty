@@ -100,14 +100,16 @@ function listJobs(event){
                 itemTitle.innerText = item.add_titles[0];
 
                 let itemDescirption = document.createElement('p');
-                itemDescirption.innerText = item.description;
+                itemDescirption.innerText = `Description: ${item.description}`;
 
                 let qualifications = document.createElement('p');
-                qualifications.innerText = item.qualifications;
+                qualifications.innerText = `Qualifications: ${item.qualifications}`;
+                
+                let tasksP = document.createElement('p');
+                tasksP.innerText = `Tasks: ${item.tasks}`;
+                
              
-
-                let itemSoc = document.createElement('em');
-                itemSoc.innerText = `Soc: ${item.soc}`;
+                
 
                 let itemDetail = document.createElement('button')
                 itemDetail.className = 'item-detail-btn';
@@ -118,9 +120,11 @@ function listJobs(event){
                 
                 itemContainer.appendChild(itemTitle);
                 divItem.appendChild(itemDescirption);
-                divItem.appendChild(itemSoc);
+               divItem.appendChild(tasksP);
 
                 divItem.appendChild(qualifications)
+                
+                //divItem.appendChild(tasks)
            
 
                 

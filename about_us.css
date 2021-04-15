@@ -1,6 +1,7 @@
 .first-impression{
+    margin-top: 5rem;
     width:100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -13,40 +14,79 @@
     width: 300px;
     flex-wrap: wrap;
 }
-
-.results-section{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
+.ab-text_wrapper h1 {
+    font-size: 2rem;
+    color: #ff474e;
+    border-bottom: 3px solid #ff474e;
 }
-.results-section h2 {
-    font-size: 3rem;
-    color:#ff474e;
-    align-self: flex;
-    margin-bottom: 10rem;
-    border-bottom: 4px solid #ff474e;
+.ab-text_wrapper p{
+    line-height: 1.5;
+    font-size: 1.1rem;
+}
+
+
+.contact-us{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 100vh;
+    color: white;
+   background-color: #0a9dae;
     
 }
-.results{
-    display:flex;
-    justify-content: center;
-    gap: 20px;
-    margin-left: 10px;
-    flex-wrap: wrap;
-}
-.results-item{
-    width: 30%;
-    height: 300px;
+#contactForm{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;   
+    gap:10px;
+
+
+}
+#contactForm input,select {
+    padding: 1.5rem;
+    outline: none;
+    
+
+
+}
+
+#contactForm input:active{
+    border: 1px solid black;
+    outline: none;
+
+}
+.names-wrapper{
+    display: flex;
+    gap: 10px;
+}
+.first-name, .last-name{
+    display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+}
+.send-button{
+    color: white;
+    padding: 1rem;
+    background-color: #0a9dae;
+    border: 1px solid white;
+    transition: all 0.5s ease-in-out;
+}
+.send-button:hover{
+    background-color: white;
+    color: #0a9dae;
+ 
 }
 
 
-
+@media (max-width: 767px){
+    .first-impression{
+        flex-direction: column;
+    }
+    .results{
+        flex-direction: column;
+    }
+    .contact-us{
+        flex-direction: column;
+        padding: 2rem;
+    }
+}
 
 /* 14213d */

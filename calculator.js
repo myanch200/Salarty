@@ -1,7 +1,7 @@
 let form = document.getElementById("calculator-form");
 let submitButton = document.getElementById("calculate-btn");
 let amountInput = document.getElementById("amount");
-
+let resultSection = document.getElementsByClassName('result-section')[0];
 let yearlyBox = document.getElementById("yearly-box");
 let monthlyBox = document.getElementById("monthly-box");
 let weeklyBox = document.getElementById("weekly-box");
@@ -57,6 +57,7 @@ function calculate(event) {
     monthlyBox.innerText = monthlyAmount;
     weeklyBox.innerText = weeklyAmount;
     hourlyBox.innerText = hourlyAmount;
+    resultSection.style.display = 'flex';
 }
 
 function calculateTheSalary(salaryType) {
