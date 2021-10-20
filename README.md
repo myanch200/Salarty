@@ -12,13 +12,13 @@
         <a href="#aboutTheProject">Landing page</a>
     </li>
     <li>
-       <a href="#aboutTheProject">Salary calculator</a>
+       <a href="#payCalculator">Pay calculator</a>
     </li>
     <li>
-       <a href="#aboutTheProject">Job information page</a>
+       <a href="#jobInformationPage">Job information page</a>
     </li>
     <li>
-       <a href="#aboutTheProject">About us</a>
+       <a href="#aboutUs">About us</a>
     </li>
 </ol>
 
@@ -64,13 +64,4 @@ Some nicely styled service cards and a footer.</p>
 <p>This page is just a basic information about the website with a  design of a contact form.
 </p>
 <img src="./assets/repository-assets/about-us.png">
-</section>
-<section id="technologiesUsed">
-    <h3>Technologies Used</h3>
-    <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>Figma</li>
-    </ul>
 </section>
