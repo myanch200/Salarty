@@ -21,7 +21,7 @@
        <a href="#aboutUs">About us</a>
     </li>
 </ol>
-
+<hr>
 <section id="aboutTheProject">
     <h3>About the project</h3>
     <p>The project was part of a course 
@@ -31,22 +31,28 @@
     The whole purpose of the project was to gain some experience in working with 3<sup>rd</sup> part API's and manipulating the DOM structure. During the development of the project I have tried to make use of good practices such as using Semantic HTML and undestandable naming convention.
     </p>
 </section>
+<hr>
+
 <section id="settinUpTheProject">
 <h3>Setting up the project</h3>
 <p>The great thing about this project is that you do not need to set up anything if you want to checkout the project or try to change some thing you can simply clone the repository and give it a try.</p>
 </section>
+<hr>
+
 <section id="landingPage">
 <h3>Landing Page</h3>
 <p>The landing page has the nav bar. One hero section with call to action button that takes the user to the pay calculator.
 Some nicely styled service cards and a footer.</p>
 <img src="./assets/repository-assets/landing.png">
 </section>
+<hr>
 
 <section id="payCalculator">
 <h3>Pay Calculator</h3>
 <p>The purpose of this page is to provide the user with the ability to calculator its salary rate by choosing amount of money and a period time for which he/she earns it.</p>
 <img src="./assets/repository-assets/pay-calclulator-1.png">
 <img src="./assets/repository-assets/pay-calculator-2.png">
+<hr>
 
 </section>
 <section id="jobInformationPage">
@@ -58,6 +64,7 @@ Some nicely styled service cards and a footer.</p>
 <img src="./assets/repository-assets/job-info-1.png">
 <img src="./assets/repository-assets/job-info-2.png">
 </section>
+<hr>
 
 <section id="aboutUs">
 <h3>About Us Page</h3>
