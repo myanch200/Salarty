@@ -51,6 +51,8 @@ Some nicely styled service cards and a footer.</p>
 <h3>Pay Calculator</h3>
 <p>The purpose of this page is to provide the user with the ability to calculator its salary rate by choosing amount of money and a period time for which he/she earns it.</p>
 <img src="./assets/repository-assets/pay-calclulator-1.png">
+<hr>
+<br>
 <img src="./assets/repository-assets/pay-calculator-2.png">
 <hr>
 
@@ -62,6 +64,8 @@ Some nicely styled service cards and a footer.</p>
     Manipulation the DOM with vanilla javascript is definetly not the best option out there. On the other hand it really help me learn more about event handlers , promises and DOM manipulation.
 </p>
 <img src="./assets/repository-assets/job-info-1.png">
+<hr>
+<br>
 <img src="./assets/repository-assets/job-info-2.png">
 </section>
 <hr>
